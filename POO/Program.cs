@@ -1,17 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
-var apuntador = new Apuntador();
-Apuntador apuntadorPlatzi = new Apuntador();
-Apuntador apuntadorPlatzi2 = new Apuntador();
+var batman = new SuperHero();
 
-apuntadorPlatzi.Color = "Negro";
-apuntadorPlatzi2.Color = "Blanco";
+batman.Id = 1;
+batman.Name = "Batman";
+batman.CanFly = false;
+batman.RealName = "Bruce Wayne";
+batman.City = "Gotham";
+batman.Powers = new[] { "Rich" };
+batman.CanFly = false;
 
-class Apuntador
+class SuperHero
 {
-    public string Color { get; set; }
-    public double Large { get; set; }
-    public short CantOfBotton { get; set; }
-    public bool HasStickers { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string RealName { get; set; }
+    public string City { get; set; }
+    public string[] Powers { get; set; }
+    public bool CanFly { get; set; }
 }
