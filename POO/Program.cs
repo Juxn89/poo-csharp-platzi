@@ -26,3 +26,15 @@ batman.UserSuperPower();
 string resultSuperPowers = batman.UserSuperPowers();
 Console.WriteLine(resultSuperPowers);
 Console.WriteLine(batman.NameAndRealName);
+
+var wolverine = new AntiHeroe();
+wolverine.Id = 2;
+wolverine.Name = "Wolverine";
+wolverine.RealName = "Logan";
+wolverine.Powers = new List<SuperPower>()
+{
+    new SuperPower() { Name = "Regeneration", Description = "Regeneration", Level = LevelPower.LevelThree },
+    new SuperPower() { Name = "Adamantium Claws", Description = "Regeneration", Level = LevelPower.LevelThree }
+};
+
+Console.WriteLine( wolverine.DoAntiHereoAction("Attack to polices") );
