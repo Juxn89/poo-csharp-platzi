@@ -25,6 +25,13 @@ batman.CanFly = false;
 
 class SuperHero
 {
+    public SuperHero()
+    {
+        this.Id = 1;
+        this.Powers = new List<SuperPower>();
+        this.CanFly = false;
+    }
+
     public int Id { get; set; }
     public string Name { get; set; }
     public string RealName { get; set; }
@@ -35,6 +42,11 @@ class SuperHero
 
 class SuperPower
 {
+    public SuperPower()
+    {
+        this.Level = LevelPower.LevelOne;
+    }
+
     public string Name { get; set; }
     public string Description { get; set; }
     public LevelPower Level { get; set; }
