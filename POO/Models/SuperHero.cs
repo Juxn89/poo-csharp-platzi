@@ -15,12 +15,23 @@ internal class SuperHero
         this.CanFly = false;
     }
 
+    private string _Name;
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string Name { 
+        get { return _Name; }
+        set { _Name = value.Trim(); }
+    }
     public string RealName { get; set; }
     public string City { get; set; }
     public List<SuperPower> Powers { get; set; }
     public bool CanFly { get; set; }
+    public string NameAndRealName
+    {
+        get
+        {
+            return $"{this.RealName} is {Name}!";
+        }
+    }
 
     public void UserSuperPower()
     {

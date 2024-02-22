@@ -25,3 +25,4 @@ batman.CanFly = false;
 batman.UserSuperPower();
 string resultSuperPowers = batman.UserSuperPowers();
 Console.WriteLine(resultSuperPowers);
+Console.WriteLine(batman.NameAndRealName);
