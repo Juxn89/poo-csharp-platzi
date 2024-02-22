@@ -15,3 +15,12 @@ Desestructuración: Los **records** admiten la desestructuración, lo que signif
 Patrones de Coincidencia: Los **records** funcionan bien con patrones de coincidencia, lo que facilita la escritura de código que responde a diferentes combinaciones de valores de objetos **record**.
 
 Usos Comunes: Los **records** son ideales para modelar tipos de datos simples como puntos, vectores, coordenadas geográficas, datos de sensores y otros valores inmutables.
+
+## Modificadores de acceso
+- ```public```: Los miembros públicos son accesibles desde cualquier lugar del programa.
+protected: Los miembros protegidos son accesibles desde la clase en la que están definidos, así como desde las clases derivadas de esa clase.
+- ```internal```: Los miembros internos son accesibles desde la clase en la que están definidos, así como desde otras clases en el mismo ensamblado.
+- ```private```: Los miembros privados solo son accesibles desde la clase en la que están definidos. Los niveles de acceso en C# se utilizan para organizar el código en una jerarquía lógica. Hay tres niveles de acceso en C#:
+- ```Público```: El nivel de acceso público es el nivel más alto de acceso. Los miembros públicos son accesibles desde cualquier lugar del programa.
+- ```Protegido```: El nivel de acceso protegido es el siguiente nivel más alto de acceso. Los miembros protegidos son accesibles desde la clase en la que están definidos, así como desde las clases derivadas de esa clase.
+- ```Privado```: El nivel de acceso privado es el nivel más bajo de acceso. Los miembros privados solo son accesibles desde la clase en la que están definidos. Los modificadores de acceso y los niveles de acceso en C# se utilizan para controlar la visibilidad de los miembros de una clase. Esto ayuda a mejorar la seguridad y la mantenibilidad del código.
