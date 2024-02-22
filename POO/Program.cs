@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
+using System.Text;
 
 Console.WriteLine("Hello, World!");
 
@@ -23,6 +24,10 @@ batman.City = "Gotham";
 batman.Powers = new List<SuperPower>() { batmanPower1, batmanPower2};
 batman.CanFly = false;
 
+batman.UserSuperPower();
+string resultSuperPowers = batman.UserSuperPowers();
+Console.WriteLine(resultSuperPowers);
+
 class SuperHero
 {
     public SuperHero()
@@ -38,6 +43,23 @@ class SuperHero
     public string City { get; set; }
     public List<SuperPower> Powers { get; set; }
     public bool CanFly { get; set; }
+
+    public void UserSuperPower()
+    {
+        Powers.ForEach(power => {
+            Console.WriteLine($"{Name} is using { power.Name } super power!");
+        });
+    }
+
+    public string UserSuperPowers()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        Powers.ForEach(power => {
+            stringBuilder.Append($"{Name} is using {power.Name} super power!");
+        });
+
+        return stringBuilder.ToString();
+    }
 }
 
 class SuperPower
