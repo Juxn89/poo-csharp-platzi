@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POO.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace POO.Models;
 
-internal class SuperHero : Heroe
+internal class SuperHero : Heroe, ISuperHeroe
 {
     public SuperHero()
     {

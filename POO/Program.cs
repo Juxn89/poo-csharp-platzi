@@ -1,4 +1,5 @@
-﻿using POO.Models;
+﻿using POO;
+using POO.Models;
 
 Console.WriteLine("Hello, World!");
 
@@ -28,6 +29,8 @@ Console.WriteLine(resultSuperPowers);
 Console.WriteLine(batman.NameAndRealName);
 Console.WriteLine(batman.SaveTheLand());
 Console.WriteLine(batman.SaveTheWorld());
+ImprimirInfo imprimir = new ImprimirInfo();
+imprimir.ImprimirSuperHero(batman);
 
 var wolverine = new AntiHeroe();
 wolverine.Id = 2;
@@ -38,5 +41,6 @@ wolverine.Powers = new List<SuperPower>()
     new SuperPower() { Name = "Regeneration", Description = "Regeneration", Level = LevelPower.LevelThree },
     new SuperPower() { Name = "Adamantium Claws", Description = "Regeneration", Level = LevelPower.LevelThree }
 };
+imprimir.ImprimirSuperHero(wolverine);
 
 Console.WriteLine( wolverine.DoAntiHereoAction("Attack to polices") );
