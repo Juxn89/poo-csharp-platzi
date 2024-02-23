@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POO.Models;
 
-internal class SuperHero
+internal class SuperHero : Heroe
 {
     public SuperHero()
     {
@@ -17,7 +17,7 @@ internal class SuperHero
 
     private string _Name;
     public int Id { get; set; }
-    public string Name { 
+    public override string Name { 
         get { return _Name; }
         set { _Name = value.Trim(); }
     }
@@ -48,5 +48,16 @@ internal class SuperHero
         });
 
         return stringBuilder.ToString();
+    }
+
+    public override string SaveTheWorld()
+    {
+        return $"{NameAndRealName} have saved the land!!!";
+    }
+
+    public override string SaveTheLand()
+    {
+        //return base.SaveTheLand();
+        return $"The world has been saved by { Name }!";
     }
 }

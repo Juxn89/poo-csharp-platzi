@@ -26,6 +26,8 @@ batman.UserSuperPower();
 string resultSuperPowers = batman.UserSuperPowers();
 Console.WriteLine(resultSuperPowers);
 Console.WriteLine(batman.NameAndRealName);
+Console.WriteLine(batman.SaveTheLand());
+Console.WriteLine(batman.SaveTheWorld());
 
 var wolverine = new AntiHeroe();
 wolverine.Id = 2;
